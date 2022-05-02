@@ -1,0 +1,297 @@
+{
+  "contractName": "iAcademyClassList",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.1+commit.df193b15\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClassList.sol\":\"iAcademyClassList\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClassList.sol\":{\"keccak256\":\"0xd5a785898442014e4b8a14903cd5112ddb99bd42780387c2f4dee787f2f96ddd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://34a43f54cb758fc0fc5ac92d1adbc0c1f5c0f4a99b7a849ce777e63759bd1536\",\"dweb:/ipfs/QmYfVhmrdi5SsHaeHd3ui3iC4MfAEuKuMucnfqTHE78nG6\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.8.1;\r\n\r\n\r\nstruct ClassStruct {\r\n    address classAddress;\r\n    bool active;\r\n    string name;\r\n}\r\n\r\ninterface iAcademyClassList {\r\n  \r\n}",
+  "sourcePath": "C:\\ACADEMY\\GITHUB\\rsk-academy-dapp\\contracts\\iAcademyClassList.sol",
+  "ast": {
+    "absolutePath": "/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClassList.sol",
+    "exportedSymbols": {
+      "ClassStruct": [
+        1397
+      ],
+      "iAcademyClassList": [
+        1398
+      ]
+    },
+    "id": 1399,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1390,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:4"
+      },
+      {
+        "canonicalName": "ClassStruct",
+        "id": 1397,
+        "members": [
+          {
+            "constant": false,
+            "id": 1392,
+            "mutability": "mutable",
+            "name": "classAddress",
+            "nodeType": "VariableDeclaration",
+            "scope": 1397,
+            "src": "87:20:4",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1391,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "87:7:4",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1394,
+            "mutability": "mutable",
+            "name": "active",
+            "nodeType": "VariableDeclaration",
+            "scope": 1397,
+            "src": "114:11:4",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1393,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "114:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1396,
+            "mutability": "mutable",
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 1397,
+            "src": "132:11:4",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 1395,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "132:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "ClassStruct",
+        "nodeType": "StructDefinition",
+        "scope": 1399,
+        "src": "61:86:4",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 1398,
+        "linearizedBaseContracts": [
+          1398
+        ],
+        "name": "iAcademyClassList",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1399,
+        "src": "151:36:4"
+      }
+    ],
+    "src": "33:154:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClassList.sol",
+    "exportedSymbols": {
+      "ClassStruct": [
+        1397
+      ],
+      "iAcademyClassList": [
+        1398
+      ]
+    },
+    "id": 1399,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1390,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:4"
+      },
+      {
+        "canonicalName": "ClassStruct",
+        "id": 1397,
+        "members": [
+          {
+            "constant": false,
+            "id": 1392,
+            "mutability": "mutable",
+            "name": "classAddress",
+            "nodeType": "VariableDeclaration",
+            "scope": 1397,
+            "src": "87:20:4",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1391,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "87:7:4",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1394,
+            "mutability": "mutable",
+            "name": "active",
+            "nodeType": "VariableDeclaration",
+            "scope": 1397,
+            "src": "114:11:4",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1393,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "114:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1396,
+            "mutability": "mutable",
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 1397,
+            "src": "132:11:4",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 1395,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "132:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "ClassStruct",
+        "nodeType": "StructDefinition",
+        "scope": 1399,
+        "src": "61:86:4",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 1398,
+        "linearizedBaseContracts": [
+          1398
+        ],
+        "name": "iAcademyClassList",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1399,
+        "src": "151:36:4"
+      }
+    ],
+    "src": "33:154:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.1+commit.df193b15.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-08-06T13:59:27.392Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

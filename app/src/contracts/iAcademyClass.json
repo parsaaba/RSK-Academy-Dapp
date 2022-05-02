@@ -1,0 +1,734 @@
+{
+  "contractName": "iAcademyClass",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addStudent",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isStudent",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.1+commit.df193b15\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addStudent\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isStudent\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClass.sol\":\"iAcademyClass\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClass.sol\":{\"keccak256\":\"0xe483457ab57a2be3818ff3378bfda7f644901552029114d63193bdf77b8cee8a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f3c08b35e1048780470b30a2cefe8166769f92881f9e105241a0acfeef372150\",\"dweb:/ipfs/QmPW4Tqf5dXwPT8W7amsC7c1UZo7uG7BNJw791SSxmSXG2\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.8.1;\r\n\r\n\r\n//enum studentStatus {Canceled = 0, InProgress = 1, Completed = 2}\r\nenum StudentStatus {Canceled, InProgress, Completed}\r\n\r\nstruct StudentInClass {\r\n    StudentStatus status;\r\n    uint start;         // UNIX timestamp when the student enrolled\r\n    uint end;           // UNIX timestamp when the student ended\r\n}\r\n\r\ninterface iAcademyClass {\r\n    function addStudent (address account) external returns (bool);\r\n    function isStudent (address account) external view returns (bool);\r\n}\r\n",
+  "sourcePath": "C:\\ACADEMY\\GITHUB\\rsk-academy-dapp\\contracts\\iAcademyClass.sol",
+  "ast": {
+    "absolutePath": "/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClass.sol",
+    "exportedSymbols": {
+      "StudentInClass": [
+        1373
+      ],
+      "StudentStatus": [
+        1365
+      ],
+      "iAcademyClass": [
+        1388
+      ]
+    },
+    "id": 1389,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1361,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:3"
+      },
+      {
+        "canonicalName": "StudentStatus",
+        "id": 1365,
+        "members": [
+          {
+            "id": 1362,
+            "name": "Canceled",
+            "nodeType": "EnumValue",
+            "src": "149:8:3"
+          },
+          {
+            "id": 1363,
+            "name": "InProgress",
+            "nodeType": "EnumValue",
+            "src": "159:10:3"
+          },
+          {
+            "id": 1364,
+            "name": "Completed",
+            "nodeType": "EnumValue",
+            "src": "171:9:3"
+          }
+        ],
+        "name": "StudentStatus",
+        "nodeType": "EnumDefinition",
+        "src": "129:52:3"
+      },
+      {
+        "canonicalName": "StudentInClass",
+        "id": 1373,
+        "members": [
+          {
+            "constant": false,
+            "id": 1368,
+            "mutability": "mutable",
+            "name": "status",
+            "nodeType": "VariableDeclaration",
+            "scope": 1373,
+            "src": "214:20:3",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_StudentStatus_$1365",
+              "typeString": "enum StudentStatus"
+            },
+            "typeName": {
+              "id": 1367,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 1366,
+                "name": "StudentStatus",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1365,
+                "src": "214:13:3"
+              },
+              "referencedDeclaration": 1365,
+              "src": "214:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_StudentStatus_$1365",
+                "typeString": "enum StudentStatus"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1370,
+            "mutability": "mutable",
+            "name": "start",
+            "nodeType": "VariableDeclaration",
+            "scope": 1373,
+            "src": "241:10:3",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1369,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "241:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1372,
+            "mutability": "mutable",
+            "name": "end",
+            "nodeType": "VariableDeclaration",
+            "scope": 1373,
+            "src": "310:8:3",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1371,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "310:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "StudentInClass",
+        "nodeType": "StructDefinition",
+        "scope": 1389,
+        "src": "185:188:3",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1388,
+        "linearizedBaseContracts": [
+          1388
+        ],
+        "name": "iAcademyClass",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "bd06ea19",
+            "id": 1380,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addStudent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1375,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1380,
+                  "src": "429:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1374,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "428:17:3"
+            },
+            "returnParameters": {
+              "id": 1379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1378,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1380,
+                  "src": "464:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1377,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "464:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "463:6:3"
+            },
+            "scope": 1388,
+            "src": "408:62:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "82f7d392",
+            "id": 1387,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStudent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1382,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1387,
+                  "src": "496:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1381,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "496:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "495:17:3"
+            },
+            "returnParameters": {
+              "id": 1386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1387,
+                  "src": "536:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "535:6:3"
+            },
+            "scope": 1388,
+            "src": "476:66:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1389,
+        "src": "377:168:3"
+      }
+    ],
+    "src": "33:514:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/ACADEMY/GITHUB/rsk-academy-dapp/contracts/iAcademyClass.sol",
+    "exportedSymbols": {
+      "StudentInClass": [
+        1373
+      ],
+      "StudentStatus": [
+        1365
+      ],
+      "iAcademyClass": [
+        1388
+      ]
+    },
+    "id": 1389,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1361,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:3"
+      },
+      {
+        "canonicalName": "StudentStatus",
+        "id": 1365,
+        "members": [
+          {
+            "id": 1362,
+            "name": "Canceled",
+            "nodeType": "EnumValue",
+            "src": "149:8:3"
+          },
+          {
+            "id": 1363,
+            "name": "InProgress",
+            "nodeType": "EnumValue",
+            "src": "159:10:3"
+          },
+          {
+            "id": 1364,
+            "name": "Completed",
+            "nodeType": "EnumValue",
+            "src": "171:9:3"
+          }
+        ],
+        "name": "StudentStatus",
+        "nodeType": "EnumDefinition",
+        "src": "129:52:3"
+      },
+      {
+        "canonicalName": "StudentInClass",
+        "id": 1373,
+        "members": [
+          {
+            "constant": false,
+            "id": 1368,
+            "mutability": "mutable",
+            "name": "status",
+            "nodeType": "VariableDeclaration",
+            "scope": 1373,
+            "src": "214:20:3",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_StudentStatus_$1365",
+              "typeString": "enum StudentStatus"
+            },
+            "typeName": {
+              "id": 1367,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 1366,
+                "name": "StudentStatus",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 1365,
+                "src": "214:13:3"
+              },
+              "referencedDeclaration": 1365,
+              "src": "214:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_StudentStatus_$1365",
+                "typeString": "enum StudentStatus"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1370,
+            "mutability": "mutable",
+            "name": "start",
+            "nodeType": "VariableDeclaration",
+            "scope": 1373,
+            "src": "241:10:3",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1369,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "241:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1372,
+            "mutability": "mutable",
+            "name": "end",
+            "nodeType": "VariableDeclaration",
+            "scope": 1373,
+            "src": "310:8:3",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1371,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "310:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "StudentInClass",
+        "nodeType": "StructDefinition",
+        "scope": 1389,
+        "src": "185:188:3",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1388,
+        "linearizedBaseContracts": [
+          1388
+        ],
+        "name": "iAcademyClass",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "bd06ea19",
+            "id": 1380,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addStudent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1375,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1380,
+                  "src": "429:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1374,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "428:17:3"
+            },
+            "returnParameters": {
+              "id": 1379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1378,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1380,
+                  "src": "464:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1377,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "464:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "463:6:3"
+            },
+            "scope": 1388,
+            "src": "408:62:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "82f7d392",
+            "id": 1387,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStudent",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1382,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1387,
+                  "src": "496:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1381,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "496:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "495:17:3"
+            },
+            "returnParameters": {
+              "id": 1386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1387,
+                  "src": "536:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "535:6:3"
+            },
+            "scope": 1388,
+            "src": "476:66:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1389,
+        "src": "377:168:3"
+      }
+    ],
+    "src": "33:514:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.1+commit.df193b15.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-08-06T13:59:27.390Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
